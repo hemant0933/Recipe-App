@@ -1,38 +1,167 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat Alternates", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.wrapper {
+  margin: 3rem 0rem;
+}
+.inner-wrapper {
+  min-height: 25rem;
+  border-radius: 2rem;
+  overflow: hidden;
+  position: relative;
+}
+.inner-wrapper img {
+  border-radius: 2rem;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.recipe-title {
+  z-index: 10;
+  position: absolute;
+  left: 50%;
+  bottom: 0%;
+  transform: translate(-50%, 0%);
+  color: white;
+  width: 100%;
   text-align: center;
+  font-weight: 600;
+  font-size: 1rem;
+  height: 40%;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gradient {
+  z-index: 3;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+}
+.list-div {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 2rem 0rem;
+}
+.SLink{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-top: 2rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.cuisine-Wrapper {
+  min-height: 25rem;
+  border-radius: 2rem;
+  overflow: hidden;
+  position: relative;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+  text-decoration: none;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.cuisine-Wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-gap: 1rem;
+}
+.cuisineInner {
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-wrap: nowrap;
+  min-width: 100px;
+}
+.cuisineInner img {
+  max-width: 300px;
+  border-radius: 2rem;
+}
+.cuisineTitle {
+  text-align: center;
+  padding: 1rem;
+}
+/* css for search.jsx */
+.formDiv{
+  margin: 0rem 10rem;
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input{
+  border: none;
+  background: linear-gradient(35deg,#494949,#313131);
+  font-size: 1.5rem;
   color: white;
+  padding: 1rem 3rem;
+  border-radius: 1rem;
+  outline: none;
+  width: 90%;
+ 
+}
+.searchDiv{
+  width: 70%;
+  font-size: 1rem;
+  border-radius: 1rem;
+  padding: 0rem 2rem;
+  background: linear-gradient(35deg,#494949,#313131);
+}
+.detailWrapper{
+  margin-top: 10rem;
+  margin-bottom: 5rem;
+  display: flex;
+}
+.detailWrapper h2{
+  margin-bottom: 2rem;
+}
+.detailWrapper li{
+  font-size: 1.2rem;
+  line-height: 2.5rem;
+}
+.detailWrapper ul{
+  margin-top: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+.Info button{
+  padding: 1rem 2rem;
+  color: #313131;
+  background: #fff;
+  margin-right: 2rem;
+  font-weight: 600;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.detailWrapper .Info{
+  margin-left: 1rem;
+}
+
+.logo{
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.NavDiv{
+  padding: 4rem 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
